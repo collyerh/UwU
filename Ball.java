@@ -14,6 +14,8 @@ public class Ball
 	private double yPosition;			// The Y coordinate of this Ball
 	private double size;				// The diameter of this Ball
 	private String colour;				// The colour of this Ball
+	private int xEdge = 1;
+	private int yEdge = 1;			
 
 										// Permissable colours are:
 										// BLACK, BLUE, CYAN, DARKGREY, GREY,
@@ -105,5 +107,22 @@ public class Ball
 	public void setColour(String c)
 	{
 		colour = c;
+	}
+
+	public int getyEdge()
+	{
+		return yEdge;
+	}
+	public int getxEdge()
+	{
+		return xEdge;
+	}
+	public void flipx()
+	{
+		xEdge *= -1;
+	}
+	public void flipy()
+	{
+		yEdge *= -1;
 	}
 }
