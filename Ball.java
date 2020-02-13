@@ -14,10 +14,6 @@ public class Ball
 	private double yPosition;			// The Y coordinate of this Ball
 	private double size;				// The diameter of this Ball
 	private String colour;				// The colour of this Ball
-	private int xEdge = 1;
-	private int yEdge = 1;			
-	private int trajectory;
-
 										// Permissable colours are:
 										// BLACK, BLUE, CYAN, DARKGREY, GREY,
 										// GREEN, LIGHTGREY, MAGENTA, ORANGE,
@@ -30,13 +26,12 @@ public class Ball
 	 * @param diameter The diameter of the Ball (in pixels)
 	 * @param col The colour of the Ball (Permissable colours are: BLACK, BLUE, CYAN, DARKGREY, GREY, GREEN, LIGHTGREY, MAGENTA, ORANGE, PINK, RED, WHITE, YELLOW)
 	 */
-	public Ball(double x, double y, double diameter, String col, int traj)
+	public Ball(double x, double y, double diameter, String col)
 	{
 		xPosition = x;
 		yPosition = y;
 		size = diameter;
 		colour = col;
-		trajectory = traj;
 	}	
 
 	/**
@@ -109,22 +104,5 @@ public class Ball
 	public void setColour(String c)
 	{
 		colour = c;
-	}
-
-	public int getyEdge()
-	{
-		return yEdge;
-	}
-	public int getxEdge()
-	{
-		return xEdge;
-	}
-	public void flipx()
-	{
-		xEdge *= -1;
-	}
-	public void flipy()
-	{
-		yEdge *= -1;
 	}
 }
