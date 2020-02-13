@@ -1,6 +1,6 @@
 /**
  * Models a simple, solid rectangle. 
- * This class represents a Rectabgle object. When combined with the GameArena class,
+ * This class represents a Rectangle object. When combined with the GameArena class,
  * instances of the Rectangle class can be displayed on the screen.
  */
 public class Rectangle 
