@@ -14,7 +14,6 @@ public class Ball
 	private double yPosition;			// The Y coordinate of this Ball
 	private double size;				// The diameter of this Ball
 	private String colour;				// The colour of this Ball
-
 										// Permissable colours are:
 										// BLACK, BLUE, CYAN, DARKGREY, GREY,
 										// GREEN, LIGHTGREY, MAGENTA, ORANGE,
