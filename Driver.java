@@ -1,14 +1,15 @@
 public class Driver{
     public static void main(String []args){
-        Ball flappy = new Ball(1000,1000,50,"YELLOW");
-        GameArena mainArena = new GameArena(2000,2000);
-        mainArena.addBall(flappy);
+        int scale = 1; //also change the scale variable in Rectangle.java
+        Ball pacman = new Ball(350*scale,450*scale,40*scale,"YELLOW");
+        GameArena mainArena = new GameArena(700*scale,900*scale);
+        mainArena.addBall(pacman);
         mainArena.setLevel();
         String direction = "";
 
 
         while(true){
-            mainArena.pause();
+            mainArena.pause(); 
             if(mainArena.rightPressed()){
                 direction = "right";
             }
@@ -22,28 +23,28 @@ public class Driver{
                 direction = "down";
             }
             if(direction == "left"){
-                if(flappy.getXPosition() == 0){
-                    flappy.setXPosition(2000);
+                if(pacman.getXPosition() == 0){
+                    pacman.setXPosition(700*scale);
                 }
-                flappy.setXPosition(flappy.getXPosition()-10);
+                pacman.setXPosition(pacman.getXPosition()-(5*scale));
             }
             if(direction == "right"){
-                if(flappy.getXPosition() == 2000){
-                    flappy.setXPosition(0);
+                if(pacman.getXPosition() == 700*scale){
+                    pacman.setXPosition(0);
                 }
-                flappy.setXPosition(flappy.getXPosition()+10);
+                pacman.setXPosition(pacman.getXPosition()+(5*scale));
             }
             if(direction == "up"){
-                if(flappy.getYPosition() == 0){
-                    flappy.setYPosition(2000);
+                if(pacman.getYPosition() == 0){
+                    pacman.setYPosition(900*scale);
                 }
-                flappy.setYPosition(flappy.getYPosition()-10);
+                pacman.setYPosition(pacman.getYPosition()-(5*scale));
             }
             if(direction == "down"){
-                if(flappy.getYPosition() == 2000){
-                    flappy.setYPosition(0);
+                if(pacman.getYPosition() == 900*scale){
+                    pacman.setYPosition(0);
                 }
-                flappy.setYPosition(flappy.getYPosition()+10);
+                pacman.setYPosition(pacman.getYPosition()+(5*scale));
             }
         }
     }

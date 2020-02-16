@@ -14,7 +14,8 @@ public class Rectangle
 	private double yPosition;			// The Y coordinate of this Rectangle
 	private double width;				// The width of this Rectangle
 	private double height;				// The height of this Rectangle
-	private String colour;				// The colour of this Rectangle
+	private String colour;	
+	private int scale = 1;			// The colour of this Rectangle
 
 										// Permissable colours are:
 										// BLACK, BLUE, CYAN, DARKGREY, GREY,
@@ -32,10 +33,10 @@ public class Rectangle
 	 */
 	public Rectangle(double x, double y, double w, double h, String col)
 	{
-		xPosition = x;
-		yPosition = y;
-		width = w;
-		height = h;
+		xPosition = x*scale;
+		yPosition = y*scale;
+		width = w*scale;
+		height = h*scale;
 		colour = col;
 	}	
 									
