@@ -13,6 +13,7 @@ public class GameArena extends JFrame implements Runnable, KeyListener
 	// Size of playarea
 	private int arenaWidth;
 	private int arenaHeight;
+    //private int level;
 
 	private boolean exiting = false; 
 
@@ -35,13 +36,13 @@ public class GameArena extends JFrame implements Runnable, KeyListener
 	 */
 	public GameArena(int width, int height)
 	{
-		this.setTitle("Let's Play!");
+		this.setTitle("Autistic Pacman");
 		this.setSize(width, height);
 		this.setResizable(false);
 		this.setBackground(Color.BLACK);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setVisible(true);		
-	
+		this.setVisible(true);
+
 		Thread t = new Thread(this);
 		t.start();
 
@@ -367,5 +368,7 @@ public class GameArena extends JFrame implements Runnable, KeyListener
 		return space;
 	}
 
-	
+	public void setLevel(){
+		Map level = new Map(this);
+	}	
 }
